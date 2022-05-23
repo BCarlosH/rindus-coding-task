@@ -4,8 +4,8 @@ object Plugins {
     const val jetbrainsKotlinAndroid = "org.jetbrains.kotlin.android"
 
     object Versions {
-        const val androidApplication = "7.1.3"
-        const val androidLibrary = "7.1.3"
+        const val androidApplication = "7.2.0"
+        const val androidLibrary = "7.2.0"
         const val jetbrainsKotlinAndroid = "1.6.10"
     }
 }
