@@ -1,19 +1,7 @@
-object Plugins {
-    const val androidApplication = "com.android.application"
-    const val androidLibrary = "com.android.library"
-    const val jetbrainsKotlinAndroid = "org.jetbrains.kotlin.android"
-
-    object Versions {
-        const val androidApplication = "7.2.0"
-        const val androidLibrary = "7.2.0"
-        const val jetbrainsKotlinAndroid = "1.6.10"
-    }
-}
-
 object Libs {
 
     object Coroutines {
-        private const val version = "1.6.0"
+        private const val version = "1.6.1"
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"

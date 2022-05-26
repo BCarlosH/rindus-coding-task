@@ -1,23 +1,10 @@
 plugins {
-    id(Plugins.androidApplication)
-    id(Plugins.jetbrainsKotlinAndroid)
+    id("com.android.application")
+    id("kotlin-android")
+    id("scripts.common-android")
 }
 
 android {
-    compileSdk = 32
-    defaultConfig {
-        applicationId = "com.example.templateusingjetpackcompose"
-        minSdk = 23
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -27,19 +14,7 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_11)
-        targetCompatibility(JavaVersion.VERSION_11)
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
-    }
+
     packagingOptions {
         resources.excludes.addAll(arrayOf("META-INF/AL2.0", "META-INF/LGPL2.1"))
     }
