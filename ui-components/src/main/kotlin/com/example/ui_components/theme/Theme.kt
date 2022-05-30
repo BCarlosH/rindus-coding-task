@@ -1,4 +1,4 @@
-package com.example.templateusingjetpackcompose.ui.theme
+package com.example.ui_components.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

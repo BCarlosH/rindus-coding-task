@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":ui-components"))
+
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)
     implementation(Libs.AndroidX.androidxCoreKtx)
