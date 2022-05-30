@@ -1,18 +1,15 @@
 package scripts
 
 plugins {
-    id("com.android.application") apply false
+    id("com.android.library")
     id("kotlin-android")
 }
 
 android {
-    compileSdk = 32
+    compileSdk = Config.compileSdk
     defaultConfig {
-        applicationId = "com.example.templateusingjetpackcompose"
-        minSdk = 23 // TODO: check the warnings after updating com.android.tools.build:gradle:7.2.1
-        targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = Config.minSdk // TODO: check the warnings after updating com.android.tools.build:gradle:7.2.1
+        targetSdk = Config.targetSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

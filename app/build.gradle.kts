@@ -1,10 +1,18 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("scripts.common-android")
 }
 
 android {
+    compileSdk = Config.compileSdk
+    defaultConfig {
+        applicationId = "com.example.templateusingjetpackcompose"
+        minSdk = Config.minSdk
+        targetSdk = Config.targetSdk
+        versionCode = 1
+        versionName = "1.0"
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -13,6 +21,14 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_11)
+        targetCompatibility(JavaVersion.VERSION_11)
+    }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 
     packagingOptions {
