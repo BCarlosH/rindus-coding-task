@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "template-using-jetpack-compose"
 include(":app")
-include(":ui-components")
+include(":core-ui")
