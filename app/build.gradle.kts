@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -36,9 +38,13 @@ android {
     }
 }
 
-dependencies {
+kapt {
+    correctErrorTypes = true // Allow references to generated code
+}
 
+dependencies {
     implementation(project(":core-ui"))
+
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)
     implementation(Libs.AndroidX.androidxCoreKtx)
@@ -51,6 +57,8 @@ dependencies {
     implementation(Libs.AndroidX.Compose.toolingPreview)
     implementation(Libs.AndroidX.Lifecycle.viewModelCompose)
     implementation(Libs.AndroidX.Navigation.navigationCompose)
+    implementation(Libs.Hilt.android)
+    kapt(Libs.Hilt.androidCompiler)
 
     testImplementation(Libs.JUnit.junit)
     androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
