@@ -1,5 +1,6 @@
 plugins {
     id("scripts.common-android")
+    id("scripts.common-android-compose")
 }
 
 dependencies {
