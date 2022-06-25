@@ -1,6 +1,6 @@
-package com.example.core.network.model
+package com.example.core.model
 
-data class NetworkCats(
+data class Cats(
     val createdAt: String,
     val id: String,
     val tags: List<String>,
