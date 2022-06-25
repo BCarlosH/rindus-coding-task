@@ -18,3 +18,4 @@ rootProject.name = "template-using-jetpack-compose"
 include(":app")
 include(":core-ui")
 include(":core-network")
+include(":core-data")
