@@ -9,6 +9,8 @@ dependencies {
     implementation(project(":core-network"))
 
     implementation(Libs.AndroidX.androidxCoreKtx)
+    implementation(Libs.Coroutines.core)
+    implementation(Libs.Coroutines.android)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
 
