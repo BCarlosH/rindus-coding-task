@@ -2,7 +2,7 @@ package com.example.core.network.di
 
 import android.content.Context
 import com.example.core.network.interceptors.ConnectivityInterceptor
-import com.example.core.network.retrofit.CatsApi
+import com.example.core.network.restApi.CatsService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -53,6 +53,6 @@ object NetworkModule {
         .build()
 
     @Provides
-    fun provideCatsApi(retrofit: Retrofit): CatsApi =
-        retrofit.create(CatsApi::class.java)
+    fun provideCatsService(retrofit: Retrofit): CatsService =
+        retrofit.create(CatsService::class.java)
 }
