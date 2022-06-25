@@ -42,6 +42,7 @@ kapt {
     correctErrorTypes = true // Allow references to generated code
 }
 
+// TODO: clean up unused dependencies
 dependencies {
     implementation(project(":core-ui"))
 

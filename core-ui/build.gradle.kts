@@ -4,6 +4,8 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":core-model"))
+
     implementation(Libs.AndroidX.androidxCoreKtx)
     implementation(Libs.AndroidX.Compose.foundation)
     implementation(Libs.AndroidX.Compose.ui)

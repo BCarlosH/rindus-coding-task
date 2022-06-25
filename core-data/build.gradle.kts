@@ -5,6 +5,9 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":core-model"))
+    implementation(project(":core-network"))
+
     implementation(Libs.AndroidX.androidxCoreKtx)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
