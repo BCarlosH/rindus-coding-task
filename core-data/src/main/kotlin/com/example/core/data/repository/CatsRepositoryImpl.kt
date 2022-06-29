@@ -22,7 +22,7 @@ class CatsRepositoryImpl @Inject constructor(
     }
 }
 
-fun List<NetworkCat>.asCat(): List<Cat> {
+private fun List<NetworkCat>.asCat(): List<Cat> {
     return map {
         Cat(
             createdAt = it.createdAt,
