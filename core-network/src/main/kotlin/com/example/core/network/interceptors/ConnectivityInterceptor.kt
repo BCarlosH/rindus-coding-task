@@ -10,7 +10,7 @@ import okhttp3.Response
 /**
  * Source: https://github.com/android10/Android-CleanArchitecture-Kotlin/blob/master/app/src/main/kotlin/com/fernandocejas/sample/core/platform/NetworkHandler.kt
  */
-class ConnectivityInterceptor(private val context: Context) : Interceptor {
+internal class ConnectivityInterceptor(private val context: Context) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         if (isNetworkAvailable()) {

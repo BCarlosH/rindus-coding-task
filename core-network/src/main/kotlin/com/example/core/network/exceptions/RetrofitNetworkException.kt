@@ -2,4 +2,4 @@ package com.example.core.network.exceptions
 
 import java.io.IOException
 
-class RetrofitNetworkException(override val message: String? = null) : IOException()
+internal class RetrofitNetworkException(override val message: String? = null) : IOException()

@@ -3,7 +3,7 @@ package com.example.core.network.utils
 import com.example.core.network.exceptions.RetrofitNetworkException
 import retrofit2.Response
 
-fun <T> Response<T>.validateResponse(): T {
+internal fun <T> Response<T>.validateResponse(): T {
     val data = this.body()
     return if (this.isSuccessful && data != null) {
         data

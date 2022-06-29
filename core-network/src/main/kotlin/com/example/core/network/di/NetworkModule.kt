@@ -24,17 +24,17 @@ interface NetworkModule {
 
     companion object {
         @Provides
-        fun providesConnectivityInterceptor(@ApplicationContext context: Context) =
+        internal fun providesConnectivityInterceptor(@ApplicationContext context: Context) =
             ConnectivityInterceptor(context)
 
         @Provides
-        fun providesHttpLoggingInterceptor() =
+        internal fun providesHttpLoggingInterceptor() =
             HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
             }
 
         @Provides
-        fun providesOkHttpClient(
+        internal fun providesOkHttpClient(
             connectivityInterceptor: ConnectivityInterceptor,
             httpLoggingInterceptor: HttpLoggingInterceptor,
         ): OkHttpClient =
