@@ -33,6 +33,13 @@ android {
         jvmTarget = "11"
     }
 
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+
     packagingOptions {
         resources.excludes.addAll(arrayOf("META-INF/AL2.0", "META-INF/LGPL2.1"))
     }
