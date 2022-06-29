@@ -1,6 +1,6 @@
 package com.example.core.network.utils
 
-import com.example.core.network.exceptions.UnknownNetworkException
+import com.example.core.network.exceptions.RetrofitNetworkException
 import retrofit2.Response
 
 fun <T> Response<T>.validateResponse(): T {
@@ -8,6 +8,6 @@ fun <T> Response<T>.validateResponse(): T {
     return if (this.isSuccessful && data != null) {
         data
     } else {
-        throw UnknownNetworkException("${this.code()} ${this.message()}")
+        throw RetrofitNetworkException("${this.code()} ${this.message()}")
     }
 }
