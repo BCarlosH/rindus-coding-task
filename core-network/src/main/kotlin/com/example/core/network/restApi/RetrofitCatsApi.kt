@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 private const val BASE_URL = "https://run.mocky.io/v3/"
 
-interface RetrofitCatsApi {
+private interface RetrofitCatsApi {
     @GET("03256b12-927c-4b06-ba0a-b527cc83943a")
     suspend fun getCats(): Response<List<NetworkCat>>
 }
