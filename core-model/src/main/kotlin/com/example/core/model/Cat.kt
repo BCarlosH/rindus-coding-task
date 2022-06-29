@@ -1,8 +1,8 @@
 package com.example.core.model
 
-data class Cats(
-    val createdAt: String,
+data class Cat(
     val id: String,
+    val createdAt: String,
     val tags: List<String>,
     val url: String,
 )
