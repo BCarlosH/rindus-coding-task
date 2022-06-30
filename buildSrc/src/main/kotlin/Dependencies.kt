@@ -23,7 +23,9 @@ object Libs {
         }
 
         object Lifecycle {
-            const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+            private const val version = "2.4.1"
+            const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:$version"
+            const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
         }
 
         object Navigation {
