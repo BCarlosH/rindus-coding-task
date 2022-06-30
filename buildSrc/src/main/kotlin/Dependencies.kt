@@ -9,6 +9,7 @@ object Libs {
 
     object AndroidX {
         const val androidxCoreKtx = "androidx.core:core-ktx:1.7.0"
+        const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
         object Compose {
             private const val version = "1.1.1"
