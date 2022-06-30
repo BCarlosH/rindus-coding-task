@@ -23,6 +23,7 @@ interface NetworkModule {
     ): NetworkCatsDataSource
 
     companion object {
+
         @Provides
         internal fun providesConnectivityInterceptor(@ApplicationContext context: Context) =
             ConnectivityInterceptor(context)

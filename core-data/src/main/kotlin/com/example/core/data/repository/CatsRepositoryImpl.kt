@@ -1,5 +1,6 @@
 package com.example.core.data.repository
 
+import com.example.core.data.errorHandler.ErrorHandler
 import com.example.core.data.utils.Result
 import com.example.core.model.Cat
 import com.example.core.network.model.NetworkCat
@@ -13,13 +14,14 @@ import javax.inject.Inject
 
 class CatsRepositoryImpl @Inject constructor(
     private val networkCatsDataSource: NetworkCatsDataSource,
+    private val errorHandler: ErrorHandler,
 ) : CatsRepository {
 
     override suspend fun getCats(): Flow<Result<List<Cat>>> {
         return flow<Result<List<Cat>>> {
             emit(Result.Success(networkCatsDataSource.getCats().asCat()))
         }
-            .catch { emit(Result.Error(it)) }
+            .catch { emit(Result.Error(errorHandler.parseError(it))) }
             .flowOn(Dispatchers.IO)
     }
 }
