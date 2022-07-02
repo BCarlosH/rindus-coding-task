@@ -15,9 +15,9 @@ class CatsViewModel @Inject constructor(
     private val catsRepository: CatsRepository,
 ) : ViewModel() {
 
-    private val _catsViewState: MutableStateFlow<CatsUiState> =
+    private val _catsUiState: MutableStateFlow<CatsUiState> =
         MutableStateFlow(CatsUiState.Loading)
-    val catsViewState: StateFlow<CatsUiState> = _catsViewState
+    val catsUiState: StateFlow<CatsUiState> = _catsUiState
 
     init {
         fetchCats()
@@ -27,7 +27,7 @@ class CatsViewModel @Inject constructor(
         viewModelScope.launch {
             catsRepository.getCats()
                 .collect { result ->
-                    _catsViewState.value = when (result) {
+                    _catsUiState.value = when (result) {
                         is Result.Success -> CatsUiState.Success(result.data)
                         is Result.Error -> CatsUiState.Error(result.errorMessage)
                     }
