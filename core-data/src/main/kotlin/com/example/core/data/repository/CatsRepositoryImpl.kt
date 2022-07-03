@@ -6,6 +6,7 @@ import com.example.core.model.Cat
 import com.example.core.network.model.NetworkCat
 import com.example.core.network.restApi.NetworkCatsDataSource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -18,6 +19,7 @@ class CatsRepositoryImpl @Inject constructor(
 ) : CatsRepository {
 
     override suspend fun getCats(): Flow<Result<List<Cat>>> {
+        delay(1500)
         return flow<Result<List<Cat>>> {
             emit(Result.Success(networkCatsDataSource.getCats().asCat()))
         }
