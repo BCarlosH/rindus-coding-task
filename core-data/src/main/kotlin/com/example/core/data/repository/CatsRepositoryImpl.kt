@@ -26,6 +26,14 @@ class CatsRepositoryImpl @Inject constructor(
             .catch { emit(Result.Error(errorHandler.parseError(it))) }
             .flowOn(Dispatchers.IO)
     }
+
+    override suspend fun getCatById(catId: String): Flow<Result<Cat>> {
+        return flow<Result<Cat>> {
+            emit(Result.Success(networkCatsDataSource.getCats().asCat().first { it.id == catId }))
+        }
+            .catch { emit(Result.Error(errorHandler.parseError(it))) }
+            .flowOn(Dispatchers.IO)
+    }
 }
 
 private fun List<NetworkCat>.asCat(): List<Cat> {
