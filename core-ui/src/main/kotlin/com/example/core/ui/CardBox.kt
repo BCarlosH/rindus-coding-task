@@ -4,7 +4,6 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
@@ -23,7 +22,7 @@ fun CardBox(
     text: String,
 ) {
     Card(
-        modifier = modifier.padding(16.dp)
+        modifier = modifier
     ) {
         Box(
             modifier = Modifier
