@@ -2,6 +2,7 @@ package com.example.feature.cats
 
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -23,22 +24,30 @@ import com.example.core.ui.rememberFlowWithLifecycle
 @Composable
 fun CatsRoute(
     viewModel: CatsViewModel = hiltViewModel(),
+    onCatClick: (String) -> Unit,
 ) {
     val catsUiState by rememberFlowWithLifecycle(viewModel.catsUiState)
         .collectAsState(initial = CatsUiState.Loading)
 
-    CatsScreen(catsUiState = catsUiState)
+    CatsScreen(
+        catsUiState = catsUiState,
+        onCatClick = onCatClick
+    )
 }
 
 @Composable
-fun CatsScreen(catsUiState: CatsUiState) {
+fun CatsScreen(
+    catsUiState: CatsUiState,
+    onCatClick: (String) -> Unit,
+) {
     when (catsUiState) {
-        CatsUiState.Loading -> {
+        is CatsUiState.Loading -> {
             LoadingScreen()
         }
         is CatsUiState.Success -> {
             CatsContent(
-                cats = catsUiState.cats
+                cats = catsUiState.cats,
+                onCatClick = onCatClick
             )
         }
         is CatsUiState.Error -> {
@@ -52,7 +61,10 @@ fun CatsScreen(catsUiState: CatsUiState) {
 }
 
 @Composable
-fun CatsContent(cats: List<Cat>) {
+fun CatsContent(
+    cats: List<Cat>,
+    onCatClick: (String) -> Unit,
+) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -61,6 +73,7 @@ fun CatsContent(cats: List<Cat>) {
     ) {
         items(cats) {
             CardBox(
+                modifier = Modifier.clickable { onCatClick(it.id) },
                 iconId = R.drawable.ic_cat,
                 text = it.tags.first()
             )

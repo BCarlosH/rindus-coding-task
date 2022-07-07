@@ -21,7 +21,7 @@ fun AppNavigation() {
                 navController = navController,
                 startDestination = "cats_graph_route"
             ) {
-                
+                addCatsGraph(navController)
             }
         }
     }
