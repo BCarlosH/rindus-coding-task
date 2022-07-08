@@ -15,6 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -87,4 +88,17 @@ fun CatsContent(
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun CatsContentPreview() {
+    CatsContent(
+        cats = listOf(
+            Cat(id = "1", createdAt = "1", tags = listOf("cute"), url = "1"),
+            Cat(id = "2", createdAt = "2", tags = listOf("fun"), url = "2"),
+            Cat(id = "3", createdAt = "3", tags = listOf("running"), url = "3"),
+            Cat(id = "4", createdAt = "4", tags = listOf("box"), url = "4")
+        ),
+        onCatClick = {})
 }

@@ -30,7 +30,7 @@ fun CatsTopAppBar(
 
 @Preview
 @Composable
-private fun SimpleTopBarPreview() {
+fun SimpleTopBarPreview() {
     CatsTopAppBar(
         title = "CatsTopAppBar",
         icon = { Icon(Icons.Filled.ArrowBack, "Back") }
