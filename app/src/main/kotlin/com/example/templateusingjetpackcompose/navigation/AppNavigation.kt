@@ -17,7 +17,7 @@ fun AppNavigation() {
 
     Scaffold { paddingValues ->
         Box(
-            modifier = Modifier.padding(bottom = paddingValues.calculateBottomPadding())
+            modifier = Modifier.padding(paddingValues)
         ) {
             AnimatedNavHost(
                 navController = navController,

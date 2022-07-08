@@ -68,9 +68,10 @@ fun CatsContent(
 ) {
     Scaffold(
         topBar = { CatsTopAppBar(title = "Cats") }
-    ) {
+    ) { paddingValues ->
         LazyColumn(
             modifier = Modifier
+                .padding(paddingValues)
                 .fillMaxSize()
                 .background(MaterialTheme.colors.background)
 
