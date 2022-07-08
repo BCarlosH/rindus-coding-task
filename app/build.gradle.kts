@@ -66,6 +66,7 @@ dependencies {
     implementation(Libs.AndroidX.Compose.toolingPreview)
     implementation(Libs.AndroidX.Lifecycle.viewModelCompose)
     implementation(Libs.AndroidX.Navigation.navigationCompose)
+    implementation(Libs.Accompanist.navigationAnimation)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
 

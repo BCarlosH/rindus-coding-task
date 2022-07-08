@@ -15,6 +15,7 @@ dependencies {
     implementation(Libs.AndroidX.Compose.ui)
     implementation(Libs.AndroidX.Compose.material)
     implementation(Libs.AndroidX.Navigation.navigationCompose)
+    implementation(Libs.Accompanist.navigationAnimation)
     implementation(Libs.AndroidX.hiltNavigationCompose)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
