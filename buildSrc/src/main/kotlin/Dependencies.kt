@@ -1,18 +1,18 @@
 object Libs {
 
     object Coroutines {
-        private const val version = "1.6.3"
+        private const val version = "1.6.4"
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
     }
 
     object AndroidX {
-        const val androidxCoreKtx = "androidx.core:core-ktx:1.7.0"
+        const val androidxCoreKtx = "androidx.core:core-ktx:1.8.0"
         const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.0.0"
 
         object Compose {
-            private const val version = "1.1.1"
+            private const val version = "1.2.0"
             const val foundation = "androidx.compose.foundation:foundation:${version}"
             const val ui = "androidx.compose.ui:ui:${version}"
             const val runtime = "androidx.compose.runtime:runtime:${version}"
@@ -24,13 +24,13 @@ object Libs {
         }
 
         object Lifecycle {
-            private const val version = "2.4.1"
+            private const val version = "2.5.1"
             const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:$version"
             const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
         }
 
         object Navigation {
-            const val navigationCompose = "androidx.navigation:navigation-compose:2.4.2"
+            const val navigationCompose = "androidx.navigation:navigation-compose:2.5.1"
         }
 
         object Test {
@@ -40,22 +40,22 @@ object Libs {
             const val rules = "androidx.test:rules:$version"
 
             object Ext {
-                private const val version = "1.1.2"
+                private const val version = "1.1.3"
                 const val junit = "androidx.test.ext:junit-ktx:$version"
             }
 
-            const val espressoCore = "androidx.test.espresso:espresso-core:3.2.0"
+            const val espressoCore = "androidx.test.espresso:espresso-core:3.4.0"
             const val uiAutomator = "androidx.test.uiautomator:uiautomator:2.2.0"
         }
     }
 
     object Accompanist {
         const val navigationAnimation =
-            "com.google.accompanist:accompanist-navigation-animation:0.24.11-rc"
+            "com.google.accompanist:accompanist-navigation-animation:0.25.0"
     }
 
     object JUnit {
-        private const val version = "4.13"
+        private const val version = "4.13.2"
         const val junit = "junit:junit:$version"
     }
 
@@ -66,11 +66,11 @@ object Libs {
     }
 
     object OkHttp3 {
-        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.8.1"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.10.0"
     }
 
     object Hilt {
-        private const val version = "2.42"
+        private const val version = "2.43.2"
         const val android = "com.google.dagger:hilt-android:$version"
         const val androidCompiler = "com.google.dagger:hilt-android-compiler:$version"
         const val androidTesting = "com.google.dagger:hilt-android-testing:$version"
