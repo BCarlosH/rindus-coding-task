@@ -1,3 +1,4 @@
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import org.jlleitschuh.gradle.ktlint.KtlintExtension
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
@@ -11,6 +12,7 @@ buildscript {
 
 plugins {
     id("org.jlleitschuh.gradle.ktlint") version "10.3.0" // Run: .\gradlew ktlintFormat
+    id("com.github.ben-manes.versions") version "0.42.0" // Run: .\gradlew dependencyUpdates
 }
 
 subprojects {
@@ -22,6 +24,16 @@ subprojects {
         reporters {
             reporter(ReporterType.CHECKSTYLE)
         }
+    }
+}
+
+tasks.withType<DependencyUpdatesTask> {
+    rejectVersionIf {
+        val stableKeyword =
+            listOf("RELEASE", "FINAL", "GA").any { candidate.version.toUpperCase().contains(it) }
+        val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+        val isStable = stableKeyword || regex.matches(candidate.version)
+        isStable.not()
     }
 }
 
