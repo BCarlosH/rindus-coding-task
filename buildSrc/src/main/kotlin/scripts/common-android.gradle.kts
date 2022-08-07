@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdk = Config.compileSdk
     defaultConfig {
-        minSdk = Config.minSdk // TODO: check the warnings after updating com.android.tools.build:gradle:7.2.1
+        minSdk = Config.minSdk
         targetSdk = Config.targetSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
