@@ -13,6 +13,7 @@ object Libs {
 
         object Compose {
             private const val version = "1.2.0"
+            const val compilerVersion = "1.2.0"
             const val foundation = "androidx.compose.foundation:foundation:${version}"
             const val ui = "androidx.compose.ui:ui:${version}"
             const val runtime = "androidx.compose.runtime:runtime:${version}"
