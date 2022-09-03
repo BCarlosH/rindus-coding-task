@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdk = Config.compileSdk
     defaultConfig {
-        applicationId = "com.example.templateusingjetpackcompose"
+        applicationId = "com.rinduscodingtask"
         minSdk = Config.minSdk
         targetSdk = Config.targetSdk
         versionCode = 1
@@ -52,7 +52,6 @@ kapt {
 // TODO: clean up unused dependencies
 dependencies {
     implementation(project(":core-ui"))
-    implementation(project(":feature-cats"))
 
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)

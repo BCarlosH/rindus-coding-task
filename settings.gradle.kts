@@ -14,10 +14,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "template-using-jetpack-compose"
+rootProject.name = "rindus-coding-task"
 include(":app")
 include(":core-ui")
 include(":core-network")
 include(":core-data")
 include(":core-model")
-include(":feature-cats")
