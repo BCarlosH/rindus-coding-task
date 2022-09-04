@@ -2,6 +2,9 @@ package com.rinduscodingtask.core.network.di
 
 import android.content.Context
 import com.rinduscodingtask.core.network.interceptors.ConnectivityInterceptor
+import com.rinduscodingtask.core.network.restApi.NetworkWeatherDataSource
+import com.rinduscodingtask.core.network.restApi.NetworkWeatherDataSourceImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,6 +16,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 @Module
 @InstallIn(SingletonComponent::class)
 interface NetworkModule {
+
+    @Binds
+    fun bindsNetworkWeatherDataSource(
+        networkWeatherDataSource: NetworkWeatherDataSourceImpl
+    ): NetworkWeatherDataSource
 
     companion object {
 
