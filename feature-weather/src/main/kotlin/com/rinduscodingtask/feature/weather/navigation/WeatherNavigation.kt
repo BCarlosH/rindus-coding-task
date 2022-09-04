@@ -1,9 +1,9 @@
 package com.rinduscodingtask.feature.weather.navigation
 
-import androidx.compose.material.Text
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import com.rinduscodingtask.feature.weather.WeatherRoute
 
 fun NavGraphBuilder.addWeatherGraph() {
     navigation(
@@ -18,7 +18,6 @@ private fun NavGraphBuilder.addWeather() {
     composable(
         route = "weather_route"
     ) {
-        // TODO: implement actual route
-        Text(text = "weather_route")
+        WeatherRoute()
     }
 }
