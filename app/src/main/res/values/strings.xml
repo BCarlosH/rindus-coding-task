@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_item">Weather</string>
+    <string name="ca_web_item"><![CDATA[C&A]]></string>
+</resources>

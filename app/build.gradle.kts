@@ -53,6 +53,7 @@ kapt {
 dependencies {
     implementation(project(":core-ui"))
     implementation(project(":feature-weather"))
+    implementation(project(":feature-ca-web"))
 
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)

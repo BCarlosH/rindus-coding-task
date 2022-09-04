@@ -7,21 +7,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.rinduscodingtask.BottomNavigationBar
+import com.rinduscodingtask.feature.caweb.navigation.addCaWebGraph
+import com.rinduscodingtask.feature.weather.navigation.addWeatherGraph
 
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
 
-    Scaffold { paddingValues ->
+    Scaffold(
+        bottomBar = { BottomNavigationBar(navController = navController) }
+    ) { paddingValues ->
         Box(
             modifier = Modifier.padding(paddingValues)
         ) {
-            // TODO: remove AnimatedNavHost
             NavHost(
                 navController = navController,
-                startDestination = "TODO: add start destination"
+                startDestination = "weather_graph_route"
             ) {
-                // TODO: Add graph
+                addWeatherGraph()
+                addCaWebGraph()
             }
         }
     }
