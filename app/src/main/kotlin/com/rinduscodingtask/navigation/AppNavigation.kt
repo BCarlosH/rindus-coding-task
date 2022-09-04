@@ -1,24 +1,23 @@
 package com.rinduscodingtask.navigation
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.google.accompanist.navigation.animation.AnimatedNavHost
-import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppNavigation() {
-    val navController = rememberAnimatedNavController()
+    val navController = rememberNavController()
 
     Scaffold { paddingValues ->
         Box(
             modifier = Modifier.padding(paddingValues)
         ) {
-            AnimatedNavHost(
+            // TODO: remove AnimatedNavHost
+            NavHost(
                 navController = navController,
                 startDestination = "TODO: add start destination"
             ) {

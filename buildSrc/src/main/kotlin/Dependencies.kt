@@ -50,10 +50,7 @@ object Libs {
         }
     }
 
-    object Accompanist {
-        const val navigationAnimation =
-            "com.google.accompanist:accompanist-navigation-animation:0.25.0"
-    }
+    object Accompanist {}
 
     object JUnit {
         private const val version = "4.13.2"

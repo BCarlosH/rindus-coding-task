@@ -15,7 +15,6 @@ dependencies {
     implementation(Libs.AndroidX.Compose.ui)
     implementation(Libs.AndroidX.Compose.material)
     implementation(Libs.AndroidX.Navigation.navigationCompose)
-    implementation(Libs.Accompanist.navigationAnimation)
     implementation(Libs.AndroidX.hiltNavigationCompose)
     debugImplementation(Libs.AndroidX.Compose.tooling)
     implementation(Libs.AndroidX.Compose.toolingPreview)
