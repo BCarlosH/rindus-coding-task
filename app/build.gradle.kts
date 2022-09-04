@@ -52,6 +52,7 @@ kapt {
 // TODO: clean up unused dependencies
 dependencies {
     implementation(project(":core-ui"))
+    implementation(project(":feature-weather"))
 
     implementation(Libs.Coroutines.core)
     implementation(Libs.Coroutines.android)
