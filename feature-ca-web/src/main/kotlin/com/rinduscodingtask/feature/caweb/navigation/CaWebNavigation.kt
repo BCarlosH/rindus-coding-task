@@ -1,9 +1,9 @@
 package com.rinduscodingtask.feature.caweb.navigation
 
-import androidx.compose.material.Text
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import com.rinduscodingtask.feature.caweb.CaWebRoute
 
 fun NavGraphBuilder.addCaWebGraph() {
     navigation(
@@ -18,7 +18,6 @@ private fun NavGraphBuilder.addCaWeb() {
     composable(
         route = "ca_web_route"
     ) {
-        // TODO: implement actual route
-        Text(text = "ca_web_route")
+        CaWebRoute()
     }
 }
