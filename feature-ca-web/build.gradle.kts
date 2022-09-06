@@ -21,6 +21,7 @@ dependencies {
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
     implementation(Libs.Coil.coilCompose)
+    implementation(Libs.Accompanist.webView)
 
     testImplementation(Libs.JUnit.junit)
     androidTestImplementation(Libs.AndroidX.Test.Ext.junit)

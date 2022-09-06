@@ -51,7 +51,9 @@ object Libs {
         }
     }
 
-    object Accompanist {}
+    object Accompanist {
+        const val webView = "com.google.accompanist:accompanist-webview:0.25.0"
+    }
 
     object JUnit {
         private const val version = "4.13.2"
