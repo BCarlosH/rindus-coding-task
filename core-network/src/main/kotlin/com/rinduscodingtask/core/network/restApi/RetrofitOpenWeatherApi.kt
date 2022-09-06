@@ -1,6 +1,7 @@
 package com.rinduscodingtask.core.network.restApi
 
 import com.rinduscodingtask.core.network.model.NetworkCurrentWeather
+import com.rinduscodingtask.core.network.model.NetworkFiveDaysForecast
 import com.rinduscodingtask.core.network.utils.validateResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
@@ -21,6 +22,9 @@ private interface RetrofitOpenWeatherApi {
 
     @GET("weather?q=$CITY,$COUNTRY_CODE&units=$UNITS_OF_MEASUREMENT&APPID=$API_ID")
     suspend fun getCurrentWeather(): Response<NetworkCurrentWeather>
+
+    @GET("forecast?q=$CITY,$COUNTRY_CODE&units=$UNITS_OF_MEASUREMENT&APPID=$API_ID")
+    suspend fun getFiveDaysForecast(): Response<NetworkFiveDaysForecast>
 }
 
 @Singleton
@@ -37,5 +41,9 @@ class NetworkWeatherDataSourceImpl @Inject constructor(
 
     override suspend fun getCurrentWeather(): NetworkCurrentWeather {
         return networkApi.getCurrentWeather().validateResponse()
+    }
+
+    override suspend fun getFiveDaysForecast(): NetworkFiveDaysForecast {
+        return networkApi.getFiveDaysForecast().validateResponse()
     }
 }
