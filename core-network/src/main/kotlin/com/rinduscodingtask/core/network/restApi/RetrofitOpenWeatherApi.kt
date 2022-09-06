@@ -19,7 +19,6 @@ private const val UNITS_OF_MEASUREMENT = "metric"
 
 private interface RetrofitOpenWeatherApi {
 
-
     @GET("weather?q=$CITY,$COUNTRY_CODE&units=$UNITS_OF_MEASUREMENT&APPID=$API_ID")
     suspend fun getCurrentWeather(): Response<NetworkCurrentWeather>
 
