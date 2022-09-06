@@ -77,4 +77,8 @@ object Libs {
     object Coil {
         const val coilCompose = "io.coil-kt:coil-compose:2.1.0"
     }
+
+    object AndroidTools {
+        const val desugarJdk = "com.android.tools:desugar_jdk_libs:1.1.5"
+    }
 }
