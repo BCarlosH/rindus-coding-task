@@ -21,6 +21,7 @@ dependencies {
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
     implementation(Libs.Coil.coilCompose)
+    implementation(Libs.AndroidX.Lifecycle.runtimeCompose)
 
     testImplementation(Libs.JUnit.junit)
     androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
