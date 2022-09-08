@@ -1,10 +1,7 @@
 package com.rinduscodingtask.core.data.repository
 
 import com.rinduscodingtask.core.data.errorHandler.ErrorHandler
-import com.rinduscodingtask.core.data.utils.DAY_FORMAT
-import com.rinduscodingtask.core.data.utils.HOUR_FORMAT
-import com.rinduscodingtask.core.data.utils.Result
-import com.rinduscodingtask.core.data.utils.dateTimeFormatter
+import com.rinduscodingtask.core.data.utils.*
 import com.rinduscodingtask.core.model.CurrentWeather
 import com.rinduscodingtask.core.model.Forecast
 import com.rinduscodingtask.core.network.model.NetworkCurrentWeather
@@ -48,10 +45,8 @@ class WeatherRepositoryImpl
 
 private fun NetworkCurrentWeather.asCurrentWeather(): CurrentWeather {
     return CurrentWeather(
-        iconId = weather.first().icon,
+        imageUrl = provideImageUrl(weather.first().icon),
         currentTemperature = main.temp,
-        maxTemperature = main.tempMax,
-        minTemperature = main.tempMin,
         humidity = main.humidity,
         pressure = main.pressure,
         windSpeed = wind.speed
@@ -60,7 +55,7 @@ private fun NetworkCurrentWeather.asCurrentWeather(): CurrentWeather {
 
 private fun NetworkForecast.asForecast(): Forecast {
     return Forecast(
-        iconId = weather.first().icon,
+        imageUrl = provideImageUrl(weather.first().icon),
         day = dateTimeFormatter(time = dataTime, format = DAY_FORMAT),
         hour = dateTimeFormatter(time = dataTime, format = HOUR_FORMAT),
         maxTemperature = main.tempMax,
