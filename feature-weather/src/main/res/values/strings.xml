@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="header_current_weather">Today in Düsseldorf</string>
+    <string name="header_forecast">5 day / 3 hour forecast</string>
+    <string name="label_degrees">%1$s\u00B0</string>
+    <string name="label_humidity">Humidity %1$s%%</string>
+    <string name="label_pressure">Pressure %1$s mb</string>
+    <string name="label_wind_speed">Wind speed %1$s km/h</string>
+    <string name="celsius">C</string>
+
+    <string name="desc_weather_icon">Weather Icon</string>
+</resources>
