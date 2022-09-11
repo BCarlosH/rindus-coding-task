@@ -84,4 +84,8 @@ object Libs {
     object AndroidTools {
         const val desugarJdk = "com.android.tools:desugar_jdk_libs:1.1.5"
     }
+
+    object Mockk {
+        const val mockk = "io.mockk:mockk:1.12.7"
+    }
 }
