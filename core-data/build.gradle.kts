@@ -15,4 +15,8 @@ dependencies {
     kapt(Libs.Hilt.androidCompiler)
 
     testImplementation(Libs.JUnit.junit)
+    testImplementation(Libs.Coroutines.test)
+    testImplementation(Libs.AndroidX.Test.core)
+    testImplementation(Libs.AndroidX.Test.Ext.junit)
+    testImplementation(Libs.Mockk.mockk)
 }
