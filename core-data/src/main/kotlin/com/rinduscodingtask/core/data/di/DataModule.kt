@@ -12,6 +12,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -24,6 +26,9 @@ interface DataModule {
     fun bindsWeatherRepository(weatherRepository: WeatherRepositoryImpl): WeatherRepository
 
     companion object {
+
+        @Provides
+        internal fun provideIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
 
         @Provides
         internal fun providesResourceProvider(@ApplicationContext context: Context) =

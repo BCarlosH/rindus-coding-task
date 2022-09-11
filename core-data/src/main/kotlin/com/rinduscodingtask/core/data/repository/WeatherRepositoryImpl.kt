@@ -7,7 +7,7 @@ import com.rinduscodingtask.core.model.Forecast
 import com.rinduscodingtask.core.network.model.NetworkCurrentWeather
 import com.rinduscodingtask.core.network.model.NetworkForecast
 import com.rinduscodingtask.core.network.restApi.NetworkWeatherDataSource
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -16,6 +16,7 @@ import javax.inject.Inject
 
 class WeatherRepositoryImpl
 @Inject constructor(
+    private val dispatcher: CoroutineDispatcher,
     private val networkWeatherDataSource: NetworkWeatherDataSource,
     private val errorHandler: ErrorHandler
 ) : WeatherRepository {
@@ -27,7 +28,7 @@ class WeatherRepositoryImpl
             )
         }
             .catch { emit(Result.Error(errorHandler.parseError(it))) }
-            .flowOn(Dispatchers.IO)
+            .flowOn(dispatcher)
     }
 
     override fun getFiveDaysForecast(): Flow<Result<List<Forecast>>> {
@@ -39,7 +40,7 @@ class WeatherRepositoryImpl
             )
         }
             .catch { emit(Result.Error(errorHandler.parseError(it))) }
-            .flowOn(Dispatchers.IO)
+            .flowOn(dispatcher)
     }
 }
 
