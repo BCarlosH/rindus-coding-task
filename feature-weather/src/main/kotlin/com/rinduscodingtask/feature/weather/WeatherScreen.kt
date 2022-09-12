@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -20,6 +21,9 @@ import coil.compose.AsyncImage
 import com.rinduscodingtask.core.model.CurrentWeather
 import com.rinduscodingtask.core.model.Forecast
 import com.rinduscodingtask.core.ui.LoadingScreen
+
+internal const val CurrentWeatherLoadingTestTag = "CurrentWeatherLoadingTestTag"
+internal const val FiveDaysForecastLoadingTestTag = "FiveDaysForecastLoadingTestTag"
 
 @OptIn(ExperimentalLifecycleComposeApi::class)
 @Composable
@@ -57,6 +61,7 @@ private fun WeatherScreen(
                         modifier = Modifier
                             .padding(top = 72.dp)
                             .fillMaxWidth()
+                            .testTag(CurrentWeatherLoadingTestTag)
                     )
                 }
                 is CurrentWeatherUiState.Success -> {
@@ -81,6 +86,7 @@ private fun WeatherScreen(
                         modifier = Modifier
                             .padding(bottom = 72.dp)
                             .fillMaxWidth()
+                            .testTag(FiveDaysForecastLoadingTestTag)
                     )
                 }
                 is FiveDaysForecastUiState.Success -> {
