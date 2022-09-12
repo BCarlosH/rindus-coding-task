@@ -11,6 +11,4 @@ dependencies {
     implementation(Libs.Retrofit.retrofitConverterGson)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
-
-    testImplementation(Libs.JUnit.junit)
 }

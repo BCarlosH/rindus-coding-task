@@ -13,9 +13,4 @@ dependencies {
     debugImplementation(Libs.AndroidX.Compose.tooling)
     implementation(Libs.AndroidX.Compose.toolingPreview)
     implementation(Libs.AndroidX.Lifecycle.runtimeKtx)
-
-    testImplementation(Libs.JUnit.junit)
-    androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
-    androidTestImplementation(Libs.AndroidX.Test.espressoCore)
-    androidTestImplementation(Libs.AndroidX.Compose.uiTest)
 }

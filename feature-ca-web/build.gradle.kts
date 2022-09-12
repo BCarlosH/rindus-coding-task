@@ -20,11 +20,5 @@ dependencies {
     implementation(Libs.AndroidX.Compose.toolingPreview)
     implementation(Libs.Hilt.android)
     kapt(Libs.Hilt.androidCompiler)
-    implementation(Libs.Coil.coilCompose)
     implementation(Libs.Accompanist.webView)
-
-    testImplementation(Libs.JUnit.junit)
-    androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
-    androidTestImplementation(Libs.AndroidX.Test.espressoCore)
-    androidTestImplementation(Libs.AndroidX.Compose.uiTest)
 }
