@@ -38,7 +38,7 @@ fun WeatherRoute(
 }
 
 @Composable
-private fun WeatherScreen(
+internal fun WeatherScreen(
     weatherUiState: WeatherUiState
 ) {
     Column(
