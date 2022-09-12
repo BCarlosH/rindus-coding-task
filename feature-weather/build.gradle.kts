@@ -27,7 +27,6 @@ dependencies {
     testImplementation(Libs.Coroutines.test)
     testImplementation(Libs.AndroidX.Test.core)
     testImplementation(Libs.AndroidX.Test.Ext.junit)
-    androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
-    androidTestImplementation(Libs.AndroidX.Test.espressoCore)
     androidTestImplementation(Libs.AndroidX.Compose.uiTest)
+    debugImplementation(Libs.AndroidX.Compose.testManifest)
 }
